@@ -85,13 +85,12 @@ nav{
   line-height: 2em;
   padding-left: 1em;
   padding-right: 1em;
-  padding-bottom: 1em;
   color:#323232;
 }
 #about{
-  background-color: #eeeeee;
   padding-top: 1em;
   padding-bottom:1em;
+  line-height: 2em;
 }
   #about h1{
     display:flex;
@@ -100,22 +99,42 @@ nav{
     font-size: 1.7em;
     color:#00897f;
     text-transform: uppercase;
+    margin-bottom: -.3em;
+    margin-top: 1.5em;
     }
-  #about .about-desc{
+  #about .about-desc-kat{
+    background-color: #eeeeee;
     color:#323232;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'PT Serif';
-    line-height: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    }
+  #about .about-desc-mavis{
+    background-color: #eeeeee;
+    color:#323232;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Serif';
     padding-left: 1em;
     padding-right: 1em;
     margin-top: -2em;
-    }
+    padding-bottom: 1.5em;
+      }
 .pretty-kitties-imgs{
   text-align: center;
   padding: 2em;
+  }
+  .pretty-kitties-img #hiphophairball{
+    visibility: hidden;
+  }
+  .pretty-kitties-img #hawaiiandude{
+    visibility: hidden;
   }
   .pretty-kitties-imgs #vampcat{
     border-radius: 50%;
@@ -178,22 +197,37 @@ footer{
   color:white;
   background-color: #00665e;
 }
-/* On devices wider than 660px */
+/* */
 @media(min-width: 660px) {
   body {
     margin: 0;
   }
+nav {
+  height:2.5em;
+  width: auto;
+  font-family: 'PT Sans Narrow';
+  font-size: 1.3em;
+  font-weight: bold;
+}
 header nav #about-nav-link{
-    display:flex;
-    visibility: visible;
-    justify-content: flex-end;
-
-  }
+  visibility: visible;
+  display:flex;
+  width:100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 2.2em;
+  font-weight: 400;
+}
 header nav #contact-nav-link{
     visibility: visible;
+    padding-right: 2.2em;
+    font-weight: 400;
 }
-header nav #cat-shop-title{
-
+body header nav #cat-shop-title{
+  display:flex;
+  width:100%;
+  flex-direction: row;
+  margin-left: -1.5em;
 }
 .hero{
   display:flex;
@@ -203,7 +237,77 @@ header nav #cat-shop-title{
   height:21em;
   position:relative;
   }
+  .business-descrip {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Serif';
+    line-height: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
+    color:#323232;
+  }
+  .business-descrip p {
+    flex-direction: row;
+      flex-basis: 6em;
+      max-width: 50em;
+    }
+  #about{
+    display:flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding-top: 1em;
+    padding-bottom:1em;
+    margin-top: 2em;
+    line-height: 2em;
+  }
+    #about h1{
+      display:flex;
+      justify-content: center;
+      font-family: 'PT Sans Narrow';
+      font-size: 1.7em;
+      color:#00897f;
+      text-transform: uppercase;
+      margin-bottom: -.3em;
+      margin-top: 1.5em;
+      }
+    #about .about-desc-kat{
+      background-color: #eeeeee;
+      color:#323232;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 250em;
+      max-width:20em;
+      font-family: 'PT Serif';
+      margin-left: 5em;
+      margin-left: 5em;
+      }
+    #about .about-desc-mavis{
+      background-color: #eeeeee;
+      color:#323232;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 250em;
+      max-width:20em;
+      font-family: 'PT Serif';
+      margin-left: 5em;
+      margin-right: 5em;
+      margin-top: 0em;
+      }
+  .pretty-kitties-imgs{
+    text-align: center;
+    padding: 2em;
+        }
+  .pretty-kitties-imgs #vampcat{
+    border-radius: 50%;
+          }
 }
+
 /* On devices wider than 940px */
 @media(min-width: 940px) {
 }
