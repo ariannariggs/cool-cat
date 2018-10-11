@@ -130,11 +130,11 @@ nav{
   text-align: center;
   padding: 2em;
   }
-  .pretty-kitties-img #hiphophairball{
-    visibility: hidden;
+.pretty-kitties-imgs #hiphophairball{
+    display:none;
   }
-  .pretty-kitties-img #hawaiiandude{
-    visibility: hidden;
+  .pretty-kitties-imgs #hawaiiandude{
+    display: none;
   }
   .pretty-kitties-imgs #vampcat{
     border-radius: 50%;
@@ -246,12 +246,14 @@ body header nav #cat-shop-title{
     line-height: 2em;
     padding-left: 5em;
     padding-right: 5em;
+    margin-top: 1.5em;
     color:#323232;
   }
   .business-descrip p {
     flex-direction: row;
       flex-basis: 6em;
       max-width: 50em;
+      margin-top: 3em;
     }
   #about{
     display:flex;
@@ -283,7 +285,6 @@ body header nav #cat-shop-title{
       max-width:20em;
       font-family: 'PT Serif';
       margin-left: 5em;
-      margin-left: 5em;
       }
     #about .about-desc-mavis{
       background-color: #eeeeee;
@@ -300,11 +301,31 @@ body header nav #cat-shop-title{
       margin-top: 0em;
       }
   .pretty-kitties-imgs{
-    text-align: center;
-    padding: 2em;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items:center;
+  }
+  .pretty-kitties-imgs #hiphophairball{
+    display: flex;
+    border-radius: 50%;
+    padding: 2em 2em 2em 2em;
+    flex-basis: 250em;
+    max-width:15em;
+        }
+  .pretty-kitties-imgs #hawaiiandude{
+    display: flex;
+    border-radius: 50%;
+    padding: 2em 1em 2em 1em;
+    flex-basis: 250em;
+    max-width: 15em;
         }
   .pretty-kitties-imgs #vampcat{
+    display:flex;
     border-radius: 50%;
+    padding: 2em 2em 2em 2em;
+    flex-basis: 250em;
+    max-width: 15em;
           }
 }
 
