@@ -130,7 +130,7 @@ nav{
   text-align: center;
   padding: 2em;
   }
-.pretty-kitties-imgs #hiphophairball{
+  .pretty-kitties-imgs #hiphophairball{
     display:none;
   }
   .pretty-kitties-imgs #hawaiiandude{
@@ -139,50 +139,62 @@ nav{
   .pretty-kitties-imgs #vampcat{
     border-radius: 50%;
     }
-#get-in-touch{
+.get-in-touch{
   background-color: #eeeeee;
   padding-top: 1em;
   padding-bottom:1em;
 }
-#get-in-touch h1{
-  display:flex;
-  justify-content: center;
-  font-family: 'PT Sans Narrow';
-  font-size: 1.7em;
-  color:#00897f;
-  text-transform: uppercase;
-}
+  .get-in-touch #get-in-touch-header{
+    display:none;
+  }
+  .get-in-touch #business-hours h1{
+    display:flex;
+    justify-content: center;
+    font-family: 'PT Sans Narrow';
+    font-size: 1.7em;
+    color:#00897f;
+    text-transform: uppercase;
+  }
+  .get-in-touch #contact-info h1{
+    display:flex;
+    justify-content: center;
+    font-family: 'PT Sans Narrow';
+    font-size: 1.7em;
+    color:#00897f;
+    text-transform: uppercase;
+  }
 
-#get-in-touch ul{
-  list-style: none;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  font-family: 'PT Serif';
-  line-height: 2em;
-  padding-left: 2em;
-  padding-right: 1em;
-  margin-top:.1em;
-  color:#323232;
-}
-#get-in-touch .contact-info ul li:nth-child(2){
-  color: #f26522;
-  font-weight: bold;
-  display: inline-flex;
-}
-#get-in-touch ul b{
-  text-transform: uppercase;
-  color:#323232;
-  text-align: left;
-}
-#get-in-touch .contact-info #addresspadding{
-padding-left:.5em;
-}
+  .get-in-touch ul{
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    font-family: 'PT Serif';
+    line-height: 2em;
+    padding-left: 2em;
+    padding-right: 1em;
+    margin-top:.1em;
+    color:#323232;
+  }
+    .get-in-touch #contact-info ul li:nth-child(2){
+      color: #f26522;
+      font-weight: bold;
+      display: inline-flex;
+    }
+  .get-in-touch ul b{
+    text-transform: uppercase;
+    color:#323232;
+    text-align: left;
+  }
+  .get-in-touch #contact-info #addresspadding{
+    padding-left:.5em;
+  }
 #map{
+  display:flex;
   width:100%;
   min-height: 20em;
-  object-position: center;
+  justify-content: center;
   object-fit:none;
 }
 footer{
@@ -209,60 +221,100 @@ nav {
   font-size: 1.3em;
   font-weight: bold;
 }
-header nav #about-nav-link{
-  visibility: visible;
-  display:flex;
-  width:100%;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 2.2em;
-  font-weight: 400;
-}
-header nav #contact-nav-link{
+  header nav #about-nav-link{
     visibility: visible;
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: flex-end;
     padding-right: 2.2em;
     font-weight: 400;
+    }
+    header nav #contact-nav-link{
+      visibility: visible;
+      padding-right: 2.2em;
+      font-weight: 400;
 }
-body header nav #cat-shop-title{
-  display:flex;
-  width:100%;
-  flex-direction: row;
-  margin-left: -1.5em;
+    body header nav #cat-shop-title{
+      display:flex;
+      width:100%;
+      flex-direction: row;
+      margin-left: -1.5em;
 }
 .hero{
   display:flex;
   justify-content: center;
   background-image: url('../images/kats-hero-mobile-bg.jpg');
   background-size: auto 100%;
-  height:21em;
+  height:25em;
   position:relative;
   }
-  .business-descrip {
-    display:flex;
-    flex-direction: column;
+  .hero #batcat{
+    width: 16em;
+    margin-top:2.275em;
+    z-index: 1;
+    position: absolute;
+    }
+  .hero .hero-text{
+    display: flex;
     justify-content: center;
-    align-items: center;
-    font-family: 'PT Serif';
-    line-height: 2em;
-    padding-left: 5em;
-    padding-right: 5em;
-    margin-top: 1.5em;
-    color:#323232;
+    flex-direction: column;
+    width: 90em;
+    font-family: 'PT Sans Narrow';
+    color: white;
+    position: relative;
+    margin-bottom: 8em;
+    }
+    .hero .hero-text #findthe{
+      text-transform: uppercase;
+      text-align: center;
+      padding-right: 12em;
+      font-size: 2em;
+      margin-bottom: -.5em;
+      }
+    .hero .hero-text #puuuuuuuuurfect{
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 5em;
+      font-weight: bold;
+      font-style: italic;
+      margin-top: 0;
+      margin-bottom: 0;
+      }
+    .hero .hero-text #costume{
+      text-transform: uppercase;
+      text-align: center;
+      padding-left: 12em;
+      font-size: 2em;
+      margin-top: -.5em;
+      }
+.business-descrip {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT Serif';
+  font-weight: bold;
+  line-height: 2em;
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-top: 1.5em;
+  color:#323232;
   }
-  .business-descrip p {
-    flex-direction: row;
+    .business-descrip p {
+      flex-direction: row;
       flex-basis: 6em;
       max-width: 50em;
       margin-top: 3em;
     }
-  #about{
-    display:flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    padding-top: 1em;
-    padding-bottom:1em;
-    margin-top: 2em;
-    line-height: 2em;
+#about{
+  display:flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding-top: 1em;
+  padding-bottom:1em;
+  margin-top: 2em;
+  line-height: 2em;
   }
     #about h1{
       display:flex;
@@ -285,6 +337,7 @@ body header nav #cat-shop-title{
       max-width:20em;
       font-family: 'PT Serif';
       margin-left: 5em;
+      padding: 1em 1em 1em 1em;
       }
     #about .about-desc-mavis{
       background-color: #eeeeee;
@@ -296,37 +349,128 @@ body header nav #cat-shop-title{
       flex-basis: 250em;
       max-width:20em;
       font-family: 'PT Serif';
-      margin-left: 5em;
+      margin-left: 4em;
       margin-right: 5em;
       margin-top: 0em;
+      padding: 1em 1em 1em 1em;
       }
-  .pretty-kitties-imgs{
-    display:flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items:center;
+.pretty-kitties-imgs{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items:center;
+  margin-bottom: .5em;
   }
   .pretty-kitties-imgs #hiphophairball{
     display: flex;
     border-radius: 50%;
     padding: 2em 2em 2em 2em;
     flex-basis: 250em;
-    max-width:15em;
+    max-width:13em;
         }
   .pretty-kitties-imgs #hawaiiandude{
     display: flex;
     border-radius: 50%;
-    padding: 2em 1em 2em 1em;
     flex-basis: 250em;
-    max-width: 15em;
+    max-width: 13em;
+    padding: 2em 1em 2em 1em;
         }
   .pretty-kitties-imgs #vampcat{
     display:flex;
     border-radius: 50%;
-    padding: 2em 2em 2em 2em;
     flex-basis: 250em;
-    max-width: 15em;
+    max-width: 13em;
+    padding: 2em 2em 2em 2em;
           }
+.get-in-touch{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  color:#323232;
+  padding-bottom: 5em;
+          }
+  .get-in-touch #get-in-touch-header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: 'PT Sans Narrow';
+    width: 100%;
+    font-size: 1.3em;
+    color:#323232;
+    padding-top: .5em;
+    padding-bottom: 1em;
+          }
+  .get-in-touch #business-hours{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 100%;
+    max-width: 20em;
+    margin-right: 2em;
+    padding:1em;
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow';
+    color:#00897f;
+    background-color: #ffffff;
+          }
+  .get-in-touch #contact-info{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 100%;
+    max-width: 20em;
+    margin-left: 2em;
+    padding:1em;
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow';
+    color:#00897f;
+    background-color: #ffffff;
+
+          }
+          .get-in-touch #business-hours h1{
+            display:flex;
+            justify-content: center;
+            font-family: 'PT Sans Narrow';
+            font-size: 1.7em;
+            color:#00897f;
+            text-transform: uppercase;
+          }
+          .get-in-touch #contact-info h1{
+            display:flex;
+            justify-content: center;
+            font-family: 'PT Sans Narrow';
+            font-size: 1.7em;
+            color:#00897f;
+            text-transform: uppercase;
+          }
+
+          .get-in-touch ul{
+            list-style: none;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            font-family: 'PT Serif';
+            line-height: 2em;
+            padding-left: 2em;
+            padding-right: 1em;
+            margin-top:.1em;
+            color:#323232;
+          }
+          .get-in-touch #contact-info ul li:nth-child(2){
+            color: #f26522;
+            font-weight: bold;
+            display: inline-flex;
+          }
+          .get-in-touch ul b{
+            text-transform: uppercase;
+            color:#323232;
+            text-align: left;
+          }
+          .get-in-touch #contact-info #addresspadding{
+          padding-left:.5em;
 }
 
 /* On devices wider than 940px */
