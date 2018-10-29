@@ -1,13 +1,14 @@
 <!DOCTYPE CSS>
-
 body {
   margin: 0;
 }
-header nav #about-nav-link{
+header nav .about-nav-link{
   visibility: hidden;
+  text-decoration: none;
 }
-header nav #contact-nav-link{
+header nav .contact-nav-link{
   visibility: hidden;
+  text-decoration: none;
 }
 nav{
   display:flex;
@@ -87,12 +88,12 @@ nav{
   padding-right: 1em;
   color:#323232;
 }
-#about{
+.about{
   padding-top: 1em;
   padding-bottom:1em;
   line-height: 2em;
 }
-  #about h1{
+.about h1{
     display:flex;
     justify-content: center;
     font-family: 'PT Sans Narrow';
@@ -102,7 +103,7 @@ nav{
     margin-bottom: -.3em;
     margin-top: 1.5em;
     }
-  #about .about-desc-kat{
+  .about-desc{
     background-color: #eeeeee;
     color:#323232;
     display:flex;
@@ -113,31 +114,15 @@ nav{
     padding-left: 1em;
     padding-right: 1em;
     }
-  #about .about-desc-mavis{
-    background-color: #eeeeee;
-    color:#323232;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'PT Serif';
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-top: -2em;
-    padding-bottom: 1.5em;
-      }
-.pretty-kitties-imgs{
-  text-align: center;
-  padding: 2em;
-  }
-  .pretty-kitties-imgs #hiphophairball{
-    display:none;
-  }
-  .pretty-kitties-imgs #hawaiiandude{
-    display: none;
+.pretty-kitties-imgs img {
+  display:none;
+  border-radius: 50%;
+  margin:auto;
+  padding:1em;
   }
   .pretty-kitties-imgs #vampcat{
-    border-radius: 50%;
+    display: block;
+    position:relative;
     }
 .get-in-touch{
   background-color: #eeeeee;
@@ -147,7 +132,7 @@ nav{
   .get-in-touch #get-in-touch-header{
     display:none;
   }
-  .get-in-touch #business-hours h1{
+  .get-in-touch .contact h1{
     display:flex;
     justify-content: center;
     font-family: 'PT Sans Narrow';
@@ -155,15 +140,6 @@ nav{
     color:#00897f;
     text-transform: uppercase;
   }
-  .get-in-touch #contact-info h1{
-    display:flex;
-    justify-content: center;
-    font-family: 'PT Sans Narrow';
-    font-size: 1.7em;
-    color:#00897f;
-    text-transform: uppercase;
-  }
-
   .get-in-touch ul{
     list-style: none;
     display:flex;
@@ -177,19 +153,16 @@ nav{
     margin-top:.1em;
     color:#323232;
   }
-    .get-in-touch #contact-info ul li:nth-child(2){
+  .get-in-touch ul b{
+    text-transform: uppercase;
+    color:#323232;
+    text-align: left;}
+
+    #address{
       color: #f26522;
       font-weight: bold;
       display: inline-flex;
     }
-  .get-in-touch ul b{
-    text-transform: uppercase;
-    color:#323232;
-    text-align: left;
-  }
-  .get-in-touch #contact-info #addresspadding{
-    padding-left:.5em;
-  }
 #map{
   display:flex;
   width:100%;
@@ -209,6 +182,7 @@ footer{
   color:white;
   background-color: #00665e;
 }
+
 /* On devices wider than 660px */
 @media(min-width: 660px) {
   body {
@@ -221,7 +195,7 @@ nav {
   font-size: 1.3em;
   font-weight: bold;
 }
-  header nav #about-nav-link{
+  header nav .about-nav-link{
     visibility: visible;
     display:flex;
     width:100%;
@@ -231,13 +205,16 @@ nav {
     font-weight: 400;
     font-size: .8em;
     text-transform: uppercase;
+    text-decoration: none;
     }
-    header nav #contact-nav-link{
+    header nav .contact-nav-link{
       visibility: visible;
       padding-right: 2.2em;
       font-weight: 400;
       font-size: .8em;
       text-transform: uppercase;
+      ;
+      text-decoration: none;
 }
     body header nav #cat-shop-title{
       display:flex;
@@ -312,7 +289,7 @@ nav {
       margin-top: 4em;
       margin-bottom: 2em;
     }
-#about{
+.about{
   display:flex;
   justify-content: center;
   flex-wrap: nowrap;
@@ -321,7 +298,7 @@ nav {
   margin-top: 2em;
   line-height: 2em;
   }
-    #about h1{
+    .about h1{
       display:flex;
       justify-content: center;
       font-family: 'PT Sans Narrow';
@@ -331,32 +308,18 @@ nav {
       margin-bottom: -.3em;
       margin-top: 1em;
       }
-    #about .about-desc-kat{
+    .about-desc{
       background-color: #eeeeee;
       color:#323232;
       display:flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-basis: 250em;
       max-width:20em;
+      min-height: 20em;
+      margin-left: 2em;
+      margin-right: 2em;
       font-family: 'PT Serif';
-      margin-left: 5em;
-      padding: 1em 1em 1em 1em;
-      }
-    #about .about-desc-mavis{
-      background-color: #eeeeee;
-      color:#323232;
-      display:flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-basis: 250em;
-      max-width:20em;
-      font-family: 'PT Serif';
-      margin-left: 3em;
-      margin-right: 5em;
-      margin-top: 0em;
       padding: 1em 1em 1em 1em;
       }
 .get-in-touch {
@@ -371,15 +334,15 @@ nav {
 @media(min-width: 940px) {
   body {
     margin: 0;
-  }
+    }
 nav {
   height:2.5em;
   width: auto;
   font-family: 'PT Sans Narrow';
   font-size: 1.3em;
   font-weight: bold;
-}
-  header nav #about-nav-link{
+  }
+  header nav .about-nav-link{
     visibility: visible;
     display:flex;
     width:100%;
@@ -389,13 +352,16 @@ nav {
     font-weight: 400;
     font-size: .8em;
     text-transform: uppercase;
+    text-decoration: none;
     }
-    header nav #contact-nav-link{
+    header nav .contact-nav-link{
       visibility: visible;
       padding-right: 2.2em;
       font-weight: 400;
       font-size: .8em;
       text-transform: uppercase;
+      ;
+      text-decoration: none;
 }
     body header nav #cat-shop-title{
       display:flex;
@@ -470,7 +436,7 @@ nav {
       margin-top: 3em;
       margin-bottom: 0em;
     }
-#about{
+.about{
   display:flex;
   justify-content: center;
   flex-wrap: nowrap;
@@ -479,8 +445,7 @@ nav {
   margin-top: 2em;
   line-height: 2em;
   }
-    #about h1{
-      display:flex;
+    .about h1{
       justify-content: center;
       font-family: 'PT Sans Narrow';
       font-size: 1.7em;
@@ -489,7 +454,7 @@ nav {
       margin-bottom: -.3em;
       margin-top: 1.5em;
       }
-    #about .about-desc-kat{
+    .about-desc{
       background-color: #eeeeee;
       color:#323232;
       display:flex;
@@ -502,49 +467,22 @@ nav {
       margin-left: 5em;
       padding: 1em 1em 1em 1em;
       }
-    #about .about-desc-mavis{
-      background-color: #eeeeee;
-      color:#323232;
-      display:flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-basis: 250em;
-      max-width:20em;
-      font-family: 'PT Serif';
-      margin-left: 4em;
-      margin-right: 5em;
-      margin-top: 0em;
-      padding: 1em 1em 1em 1em;
-      }
-.pretty-kitties-imgs{
-  display:flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items:center;
-  margin-bottom: .5em;
-  }
-  .pretty-kitties-imgs #hiphophairball{
-    display: flex;
-    border-radius: 50%;
-    padding: 2em 2em 2em 2em;
-    flex-basis: 250em;
-    max-width:13em;
-        }
-  .pretty-kitties-imgs #hawaiiandude{
-    display: flex;
-    border-radius: 50%;
-    flex-basis: 250em;
-    max-width: 13em;
-    padding: 2em 1em 2em 1em;
-        }
-  .pretty-kitties-imgs #vampcat{
+
+.pretty-kitties-imgs {
     display:flex;
-    border-radius: 50%;
-    flex-basis: 250em;
-    max-width: 13em;
-    padding: 2em 2em 2em 2em;
-          }
+    flex-basis: 60em;
+    justify-content: center;
+}
+.pretty-kitties-imgs img {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  max-width:13em;
+  padding:3em;
+}
 .get-in-touch{
   display:flex;
   flex-wrap: wrap;
@@ -566,52 +504,27 @@ nav {
     padding-top: .5em;
     padding-bottom: 1em;
           }
-  .get-in-touch #business-hours{
+  .get-in-touch .contact{
     display:flex;
     flex-direction: column;
     justify-content: center;
     flex-basis: 100%;
-    max-width: 20em;
-    margin-right: 2em;
+    max-width: 30%;
+    min-height: 15em;
+    margin: 2em;
     padding:1em;
     text-transform: uppercase;
     font-family: 'PT Sans Narrow';
     color:#00897f;
     background-color: #ffffff;
           }
-  .get-in-touch #contact-info{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-basis: 100%;
-    max-width: 20em;
-    margin-left: 2em;
-    padding:1em;
-    text-transform: uppercase;
-    font-family: 'PT Sans Narrow';
-    color:#00897f;
-    background-color: #ffffff;
-
-          }
-          .get-in-touch #business-hours h1{
+          .get-in-touch .contact h1{
             display:flex;
-            justify-content: center;
             font-family: 'PT Sans Narrow';
             font-size: 1.7em;
-            color:#00897f;
             text-transform: uppercase;
             margin-bottom: .4em;
           }
-          .get-in-touch #contact-info h1{
-            display:flex;
-            justify-content: center;
-            font-family: 'PT Sans Narrow';
-            font-size: 1.7em;
-            color:#00897f;
-            text-transform: uppercase;
-            margin-bottom: .4em;
-          }
-
           .get-in-touch ul{
             list-style: none;
             display:flex;
@@ -621,25 +534,14 @@ nav {
             font-family: 'PT Serif';
             line-height: 2em;
             padding-left: 2em;
-            padding-right: 1em;
             margin-top:.1em;
             margin-left: 0em;
-            color:#323232;
           }
-          .get-in-touch #contact-info ul li:nth-child(2){
+          #address{
             color: #f26522;
             font-weight: bold;
-            display: inline-flex;
+            display: inline;
           }
-          .get-in-touch ul b{
-            text-transform: uppercase;
-            color:#323232;
-            text-align: left;
-          }
-          .get-in-touch #contact-info #addresspadding{
-          padding-left:.5em;
-}
-
 footer{
   display:flex;
   height:3.8em;
@@ -652,4 +554,5 @@ footer{
   padding-bottom:1em;
   color:white;
   background-color: #00665e;
+}
 }/* On devices wider than 940px */
